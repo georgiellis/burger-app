@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: lightgray;
+}
+
+/* ===== Title header ===== */
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FA1F19;
+}
+
+.title h1 {
+    margin-bottom: 0;
+    font-size: 75px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+.title-image-h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title img {
+    width: 400px;
+    height: 200px;
+}
+
+.title h2 {
+    margin-top: 0;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+}
+
+/* ===== Not devoured section ===== */
+#notDevoured {
+    padding-left: 20px;
+}
+
+#notDevoured h4 {
+    font-family: 'Anton', sans-serif;
+    color: #FA1F19;
+}
+
+.list {
+    font-family: 'Anton', sans-serif;
+}
+
+.devoured {
+    margin-right: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: #FA1F19;
+    color: #fff;
+    border-color: #000;
+}
+
+.devoured:hover {
+    background: #FCEC04;
+    color: #000;
+}
+
+/* ===== Devoured section  ===== */
+#devoured h4 {
+    font-family: 'Anton', sans-serif;  
+    color: #FA1F19;
+}
+
+/* ===== Add burger section ===== */
+.create-burger {
+    padding-bottom: 20px;
+    font-family: 'Anton', sans-serif;
+}
+
+.create-burger h4 {
+    font-family: 'Anton', sans-serif;
+    color: #FA1F19;
+}
+
+.addNewBurger {
+    color: #000;
+    font-size: 18px;
+}
+
+#burgerName {
+    margin-bottom: 20px;
+}
+
+#burgerButton {
+    padding: 10px;
+    cursor: pointer;
+    background: #FCEC04;
+    color: #000;
+    border-color: #000;
+    font-weight: bold;
+}
+
+#burgerButton:hover {
+    background: #FA1F19;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ===== Media queries ===== */
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 650px) {
+    .title-image-h2 {
+        display: none;
+    }
+
+    .title h1 {
+        font-size: 50px;
+    }
+}
