@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(".devoured").on("click", function (event) {
         event.preventDefault();
-        var id = $(this).data("id");
+        const id = $(this).data("id");
         // console.log(id);
         $.ajax({url: "/api/burgers/" + id, method: "PUT"})
             
@@ -14,7 +14,7 @@ $(document).ready(function () {
     $(".add-burger").on("click", function (event) {
         event.preventDefault();
 
-        var newBurger = {
+        const newBurger = {
             name: $("#burgerName").val().trim()
         };
 

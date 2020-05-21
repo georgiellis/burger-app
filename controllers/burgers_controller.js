@@ -1,10 +1,10 @@
-var express = require("express");
-var router = express.Router();
-var burger = require("../models/burger.js");
+const express = require("express");
+const router = express.Router();
+const burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
     burger.selectAll(function(data) {
-        var hbsObject = {
+        const hbsObject = {
             burgers: data
         };
         res.render("index", hbsObject);
@@ -19,7 +19,7 @@ router.post("/api/burgers", function(req, res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-    var id = req.params.id;
+    const id = req.params.id;
     // console.log(id);
     burger.updateOne("devoured", true, id, function(results){
         res.json(results);
